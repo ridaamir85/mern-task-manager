@@ -114,12 +114,6 @@ VITE_API_URL=https://your-render-service.onrender.com/api
 
 After Vercel deploys, update Render's `CLIENT_URL` with the Vercel website URL.
 
-## Live links
-
-- Live application: _Add after deployment_
-- Backend API: _Add after deployment_
-- GitHub repository: https://github.com/ridaamir85/mern-task-manager
-
 ## Author
 
 Rida Amir
