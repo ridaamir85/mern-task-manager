@@ -113,7 +113,3 @@ VITE_API_URL=https://your-render-service.onrender.com/api
 ```
 
 After Vercel deploys, update Render's `CLIENT_URL` with the Vercel website URL.
-
-## Author
-
-Rida Amir
