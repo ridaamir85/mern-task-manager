@@ -2,11 +2,11 @@
   "name": "mern-task-manager-server",
   "version": "1.0.0",
   "description": "A REST API for managing users and their tasks.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "check": "node --check server.js && node --check src/app.js && node --check src/controllers/authController.js && node --check src/controllers/taskController.js && node --check src/middleware/authMiddleware.js && node --check src/middleware/errorMiddleware.js && node --check src/models/User.js && node --check src/models/Task.js"
+    "check": "node --check index.js && node --check server.js && node --check src/app.js && node --check src/controllers/authController.js && node --check src/controllers/taskController.js && node --check src/middleware/authMiddleware.js && node --check src/middleware/errorMiddleware.js && node --check src/models/User.js && node --check src/models/Task.js"
   },
   "keywords": [
     "nodejs",

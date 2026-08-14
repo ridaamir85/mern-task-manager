@@ -20,7 +20,7 @@ A full-stack task manager built with MongoDB, Express, React, and Node.js. Users
 - **Backend:** Node.js, Express
 - **Database:** MongoDB Atlas with Mongoose
 - **Authentication:** JSON Web Tokens and bcrypt
-- **Deployment:** Vercel (frontend) and Render (backend)
+- **Deployment:** Vercel (frontend and backend)
 
 ## Project structure
 
@@ -28,8 +28,8 @@ A full-stack task manager built with MongoDB, Express, React, and Node.js. Users
 mern-task-manager/
 |-- client/       React frontend
 |-- server/       Express and MongoDB API
-|-- render.yaml   Render deployment configuration
-`-- vercel.json   Vercel deployment configuration
+|-- client/       Vercel frontend project
+`-- server/       Vercel backend project
 ```
 
 ## Run locally
@@ -98,18 +98,20 @@ Protected endpoints require `Authorization: Bearer <token>`.
 | Update | Toggle completed status | `PATCH /api/tasks/:id` |
 | Delete | Remove a task | `DELETE /api/tasks/:id` |
 
-## Deployment
+## Deployment on Vercel
 
-### Backend on Render
+Import this repository twice as two Vercel projects.
 
-Create a Render Blueprint from this repository or create a Web Service with `server` as the root directory. Add `MONGODB_URI` and the final Vercel URL as `CLIENT_URL`.
+### Backend project
 
-### Frontend on Vercel
+Set the root directory to `server` and add `MONGODB_URI`, `JWT_SECRET`, `JWT_EXPIRES_IN`, and `CLIENT_URL` as environment variables.
 
-Import this repository into Vercel. The included `vercel.json` builds the `client` application. Add this environment variable:
+### Frontend project
+
+Set the root directory to `client` and add:
 
 ```env
-VITE_API_URL=https://your-render-service.onrender.com/api
+VITE_API_URL=https://your-api-project.vercel.app/api
 ```
 
-After Vercel deploys, update Render's `CLIENT_URL` with the Vercel website URL.
+After the frontend deploys, update the backend project's `CLIENT_URL` with the frontend Vercel URL.
